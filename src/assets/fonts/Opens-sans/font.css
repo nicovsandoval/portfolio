@@ -1,0 +1,33 @@
+/* ---------------------------------------------------------------------------------------*/
+/* ------------------------------------  OPEN SANS  --------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('./static/OpenSans-Light.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-Medium';
+    src: url('./static/OpenSans-Medium.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('./static/OpenSans-Regular.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('./static/OpenSans-SemiBold.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('./static/OpenSans-Bold.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'OpenSans-ExtraBold';
+    src: url('./static/OpenSans-ExtraBold.ttf') format('woff');
+}
