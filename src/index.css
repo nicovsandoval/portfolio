@@ -33,8 +33,7 @@ header {
     z-index: 1;
     position: fixed;
     /* background: #fff; */
-    background: linear-gradient(180deg, rgba(0, 210, 196, 0.28904061624649857) 0%, rgba(255, 255, 255, 1) 100%);
-
+    /* background: linear-gradient(180deg, rgba(0, 210, 196, 0.28904061624649857) 0%, rgba(255, 255, 255, 1) 100%); */
 }
 
 header a {
