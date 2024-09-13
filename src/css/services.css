@@ -1,0 +1,26 @@
+#services {
+    .service {
+        width: 100%;
+        padding: 1rem;
+        max-width: 280px;
+        min-height: 150px;
+        border-radius: 10px;
+        border: 2px solid #bcbcbc;
+
+        gap: 8px;
+        display: flex;
+        flex-direction: column;
+
+        em {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        &:hover {
+            border-color: #00e1ff;
+        }
+    }
+}

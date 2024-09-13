@@ -1,0 +1,24 @@
+#skills {
+    .skill {
+        width: 100%;
+        display: flex;
+        font-size: 14px;
+        font-weight: 600;
+        max-width: 280px;
+        min-height: 150px;
+        align-items: center;
+        align-items: center;
+        border-radius: 10px;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid #bcbcbc;
+
+        img {
+            max-width: 65px;
+        }
+    
+        &:hover {
+            border-color: #00e1ff;
+        }
+    }
+}
