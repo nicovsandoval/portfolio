@@ -98,7 +98,7 @@ main #about h2 {
     font-family: 'OpenSans-SemiBold';
 }
 
-main #skills .skill {
+/* main #skills .skill {
     width: 100%;
     display: flex;
     font-size: 14px;
@@ -115,13 +115,13 @@ main #skills .skill {
     &:hover {
         border-color: #00e1ff;
     }
-}
+} */
 
-main #skills .skill img {
+/* main #skills .skill img {
     max-width: 65px;
-}
+} */
 
-main #projects .card-project {
+/* main #projects .card-project {
     width: 100%;
     max-width: 400px;
     min-height: 300px;
@@ -131,20 +131,20 @@ main #projects .card-project {
     &:hover {
         border-color: #00e1ff;
     }
-}
+} */
 
-main #projects .card-project .card-header {
+/* main #projects .card-project .card-header {
     width: 100%;
     height: 200px;
     overflow: hidden;
-}
+} */
 
-main #projects .card-project .card-header img {
+/* main #projects .card-project .card-header img {
     max-width: 100%;
     object-fit: fill;
-}
+} */
 
-main #projects .card-project .card-body {
+/* main #projects .card-project .card-body {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -153,9 +153,9 @@ main #projects .card-project .card-body {
 
 main #projects .card-project .card-body .icon {
     font-size: 25px;
-}
+} */
 
-main #services .service {
+/* main #services .service {
     width: 100%;
     padding: 1rem;
     max-width: 280px;
@@ -178,14 +178,13 @@ main #services .service em {
 
 main #services .service p {
     font-size: 14px;
-}
+} */
 
-main #download-cv button {
+/* main #download-cv button {
     font-size: 18px;
     font-weight: 600;
     border-radius: 10px;
     background: transparent;
-    /* border: 2px solid #00ffee; */
     border: 3px solid #00857c;
     color: #00857c;
     overflow: hidden;
@@ -197,9 +196,9 @@ main #download-cv button {
         border-color: #00d2c4;
         transform: scale(1.1);
     }
-}
+} */
 
-main #contact .form,
+/* main #contact .form,
 main #contact .social-media {
     width: 100%;
     max-width: 420px;
@@ -300,7 +299,6 @@ main #contact textarea {
     font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
 
     &:focus {
-        /* border-color: rgb(183, 255, 230); */
         box-shadow: rgb(97, 255, 200) 0px 0px 10px;
     }
 
@@ -311,7 +309,7 @@ main #contact textarea {
     &::-webkit-input-placeholder {
         color: #a8a8a8;
     }
-}
+} */
 
 footer {
     color: #fff;

@@ -1,91 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>Nicolas Viviescas</title>
 
-    <!-- Utils Styles -->
-    <link rel="stylesheet" href="./css/utils/sizing.css">
-    <link rel="stylesheet" href="./css/utils/flexbox.css">
-
-    <!-- Fonts Styles -->
-    <link rel="stylesheet" href="./assets/fonts/Icomoon/icomoon.css">
-    <link rel="stylesheet" href="./assets/fonts/Opens-sans/open-sans.css">
-
-    <!-- Generic Styles -->
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/skills.css">
-    <link rel="stylesheet" href="./css/projects.css">
-    <link rel="stylesheet" href="./css/services.css">
-    <link rel="stylesheet" href="./css/download-cv.css">
-    <link rel="stylesheet" href="./css/contact.css">
-    <link rel="stylesheet" href="./css/footer.css">
-
-    <title>STBDEV</title>
-
-    <style>
-        /* Variables */
-        :root {
-            /* THEMES */
-
-            /* - Theme dark - */
-            --theme-dark-color: white;
-            --theme-dark-background: #0a0028;
-            --theme-dark-color-hover: yellow;
-            /* - Theme light - */
-            --theme-light-color: #00091f;
-            --theme-light-background: #ecf4ff;
-            --theme-light-color-hover: rgb(0, 137, 183);
-
-            /* Transitions*/
-            --transition-all-01-ease-in-out: all 0.1s ease-in-out;
-            --transition-all-02-ease-in-out: all 0.2s ease-in-out;
-            --transition-all-03-ease-in-out: all 0.3s ease-in-out;
-        }
-
-        main {
-            section {
-                min-height: 100vh;
-                padding-block: 5rem;
-
-                /*Css Grid*/
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                justify-content: center;
-
-                .container {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    max-width: 900px;
-                    flex-direction: column;
-                }
-            }
-        }
-
-        /* #experience {}
-
-        #skills {}
-
-        #about_me {}
-
-        #projects {}
-
-        footer {} */
-    </style>
-
-    <script type="module" src="./js/index.js"></script>
+    <link rel="stylesheet" href="./assets/fonts/Opens-sans/font.css">
+    <link rel="stylesheet" href="./assets/fonts/icomoon/icomoon.css">
+    <link rel="stylesheet" href="./assets/css/sizing.css">
+    <link rel="stylesheet" href="./assets/css/flexbox.css">
+    <link rel="stylesheet" href="index-old.css">
 </head>
 
-<body class="light">
+<body>
 
-    <header class="width-100 display-flex align-items-center justify-content-between padding-inline-5">
-        <a href="https://sebastiantobon.com">STBDEV | Portafolio Web</a>
+    <!-- Header -->
+    <header class="width-100 display-flex align-items-center justify-content-between padding-4">
+        <div class="logo">
+            <h2>Nicolas Viviescas</h2>
+        </div>
         <nav class="display-flex align-items-center gap-3">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
@@ -94,37 +29,27 @@
             <a href="#services">Services</a>
             <a href="#download-cv">CV</a>
             <a href="#contact">Contact</a>
-            <button type="button" id="btn-theme" aria-label="Cambiar Tema"></button>
-            <div class="container-themes flex-direction-column padding-block-1">
-                <button type="button" id="btn-theme-dark"
-                    class="display-flex align-items-center gap-1 padding-inline-2 padding-block-1">
-                    <span></span>
-                    Dark
-                </button>
-                <button type="button" id="btn-theme-light"
-                    class="display-flex align-items-center gap-1 padding-inline-2 padding-block-1">
-                    <span></span>
-                    Light
-                </button>
-            </div>
         </nav>
     </header>
-
     <main>
-        <section id="about" class="align-items-center padding-inline-5 gap-3">
-            <img loading="lazy" src="./assets/images/foto.webp" alt="Foto StbDev">
-            <h1>Nicolas Viviescas</h1>
-            <p class="title-profession">Ingeniero de sistemas | <span>Desarrollador de software</span></p>
-            <p class="current-work">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique
-                molestias est maiores dignissimos distinctio eum, inventore, quis numquam non aut odio ullam nesciunt
-                sed adipisci iure rem placeat officia?</p>
-            <div class="icon-container">
-                <a class="icon-scroll" href="#experience"></a>
+        <!-- About -->
+        <section id="about" class="padding-5 gap-5">
+            <div class="gap-5">
+                <div class="foto">
+                    <img src="./assets/images/foto-nicolas.webp" alt="" srcset="">
+                </div>
+                <div class="descrption">
+                    <h1>Nicolas Viviescas</h1>
+                    <h2 class="margin-bottom-3">Arquitecto desarrollador de software</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dolorum ratione dicta minima
+                        eaque, ullam perferendis, corrupti officia laudantium natus dolorem illo laboriosam explicabo
+                        exercitationem voluptatem, quia nesciunt aut placeat.</p>
+                </div>
             </div>
         </section>
         <!-- Experience -->
         <section id="experience">
-            <div class="container gap-5">
+            <div class="gap-5">
                 <h1>Experience</h1>
                 <div class="companies display-flex flex-direction-column gap-3 padding-inline-5">
                     <article class="company display-flex  flex-direction-column gap-1">
@@ -156,7 +81,7 @@
         </section>
         <!-- Skills -->
         <section id="skills">
-            <div class="container gap-5">
+            <div class="gap-5">
                 <h1>Skills</h1>
                 <div class="container-skills display-flex justify-content-center flex-wrap gap-3">
                     <article class="skill">
@@ -188,7 +113,7 @@
         </section>
         <!-- Projects -->
         <section id="projects">
-            <div class="container gap-5">
+            <div class="gap-5">
                 <h1>Projects</h1>
                 <div class="container-projects display-flex justify-content-center flex-wrap gap-3">
                     <article class="card-project">
@@ -256,7 +181,7 @@
         </section>
         <!-- Services -->
         <section id="services">
-            <div class="container gap-5">
+            <div class="gap-5">
                 <h1>Services</h1>
                 <div class="container-services display-flex justify-content-center flex-wrap gap-3">
                     <article class="service">
@@ -294,14 +219,14 @@
         </section>
         <!-- Download CV -->
         <section id="download-cv">
-            <div class="container gap-5">
+            <div class="gap-5">
                 <h1>Download CV</h1>
                 <button type="button" class="padding-3">If you want download my CV, click here.</button>
             </div>
         </section>
         <!-- Contact -->
         <section id="contact">
-            <div class="container gap-5">
+            <div class="gap-5">
                 <h1>Contact</h1>
                 <div class="container-contacts display-flex justify-content-center flex-wrap gap-3">
                     <div class="form padding-inline-3">
@@ -334,7 +259,6 @@
             </div>
         </section>
     </main>
-
     <footer class="display-flex align-items-center justify-content-between padding-4">
         <div class="logo">&copy; 2025 Nicolas Viviescas, all right reserved.</div>
         <nav class="display-flex align-items-center gap-3">
