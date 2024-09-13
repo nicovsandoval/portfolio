@@ -20,7 +20,7 @@
         }
 
         &:hover {
-            border-color: #00e1ff;
+            border-color: var(--theme-active-color-hover);
         }
     }
 }

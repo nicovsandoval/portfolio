@@ -39,7 +39,7 @@
             /* - Theme light - */
             --theme-light-color: #00091f;
             --theme-light-background: #ecf4ff;
-            --theme-light-color-hover: rgb(0, 137, 183);
+            --theme-light-color-hover: rgb(0, 123, 255);
 
             /* Transitions*/
             --transition-all-01-ease-in-out: all 0.1s ease-in-out;
@@ -64,6 +64,12 @@
                     display: flex;
                     max-width: 900px;
                     flex-direction: column;
+
+                    h1 {
+                        &:hover {
+                            color: var(--theme-active-color-hover);
+                        }
+                    }
                 }
             }
         }
@@ -113,11 +119,18 @@
     <main>
         <section id="about" class="align-items-center padding-inline-5 gap-3">
             <img loading="lazy" src="./assets/images/foto.webp" alt="Foto StbDev">
-            <h1>Nicolas Viviescas</h1>
-            <p class="title-profession">Ingeniero de sistemas | <span>Desarrollador de software</span></p>
-            <p class="current-work">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique
-                molestias est maiores dignissimos distinctio eum, inventore, quis numquam non aut odio ullam nesciunt
-                sed adipisci iure rem placeat officia?</p>
+            <div class="display-flex flex-direction-column gap-2">
+                <h1>Nicolas Viviescas</h1>
+                <div class="container-title-profession">
+                    <p class="profession">Arquitecto desarrollador de software</p>
+                    <p class="title">Ingeniero de sistemas</p>
+                </div>
+                <p class="current-work">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+                    similique
+                    molestias est maiores dignissimos distinctio eum, inventore, quis numquam non aut odio ullam
+                    nesciunt
+                    sed adipisci iure rem placeat officia?</p>
+            </div>
             <div class="icon-container">
                 <a class="icon-scroll" href="#experience"></a>
             </div>
@@ -296,7 +309,11 @@
         <section id="download-cv">
             <div class="container gap-5">
                 <h1>Download CV</h1>
-                <button type="button" class="padding-3">If you want download my CV, click here.</button>
+                <button type="button" class="padding-3">
+                    <p>
+                        If you want download my CV, click here.
+                    </p>
+                </button>
             </div>
         </section>
         <!-- Contact -->
