@@ -1,19 +1,19 @@
 footer {
-    color: #fff;
-    background: rgba(0, 75, 66, 1);
+    color: var(--theme-active-color);
+    background: var(--theme-active-background);
 
     a {
-        color: #fff;
         height: 40px;
         display: flex;
         cursor: pointer;
         align-items: center;
         transition: all .2s ease-in-out;
+        color: var(--theme-active-color);
 
         &:hover {
             font-weight: 600;
-            color: #00d2c4;
             transform: scale(1.1);
+            color: var(--theme-active-color-hover);
         }
     }
 }

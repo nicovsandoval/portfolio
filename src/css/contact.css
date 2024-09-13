@@ -1,16 +1,17 @@
 #contact {
+
     .form,
     .social-media {
         width: 100%;
         max-width: 420px;
 
-        icon {
+        .icon {
             font-size: 35px;
             color: #a8a8a8;
             transition: all .3s ease-in-out;
-        
+
             &:hover {
-                color: rgb(97, 255, 200);
+                color: var(--theme-active-color-hover);
             }
         }
     }
@@ -24,46 +25,51 @@
             outline: none;
             font-size: 16px;
             padding-top: 6px;
-            color: #a8a8a8;
+            color: var(--theme-active-color);
             border-radius: 6px;
             background: transparent;
-            border: 2px solid #a8a8a8;
-        
+            border: 2px solid var(--theme-active-color);
+
             &:-webkit-autofill,
             &:-webkit-autofill:hover,
             &:-webkit-autofill:focus {
-                border: 2px solid rgb(183, 255, 230);
-                -webkit-text-fill-color: #a8a8a8 !important;
-                -webkit-box-shadow: 0 0 0px 1000px rgb(97, 255, 200) inset;
+                padding-left: 1rem;
+                border: 2px solid var(--theme-active-color-hover);
+                -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+                -webkit-text-fill-color: var(--theme-active-background) !important;
             }
-        
+
             &:focus {
-                box-shadow: rgb(97, 255, 200) 0px 0px 10px;
+                padding-left: 1rem;
+                border-color: var(--theme-active-color-hover);
+                /* box-shadow: var(--theme-active-color-hover) 0px 0px 10px; */
             }
-        
+
             &:focus~label,
             &:not(:placeholder-shown).form-input:not(:focus)~label {
                 top: 0;
-                font-size: 14px;
-                background: #fff;
-                padding-inline: 5px;
+                font-size: 12px;
+                padding-block: 2px;
                 border-radius: 30px;
-                color: #a8a8a8;
+                padding-inline: 10px;
                 letter-spacing: -.5px;
+                color: var(--theme-active-color);
+                background: var(--theme-active-background);
+                border: 1px solid var(--theme-active-color-hover);
             }
         }
-        
+
         label {
             top: 50%;
             left: 1rem;
             font-size: 16px;
-            color: #a8a8a8;
             position: absolute;
             pointer-events: none;
             letter-spacing: -.5px;
             background: transparent;
             transform: translateY(-50%);
             transition: all .3s ease-in-out;
+            color: var(--theme-active-color);
         }
     }
 
@@ -73,46 +79,46 @@
         min-height: 200px;
         max-height: 400px;
         border-radius: 6px;
-        color: #a8a8a8;
         background: transparent;
-        border: 2px solid #a8a8a8;
+        color: var(--theme-active-color);
+        border: 2px solid var(--theme-active-color);
         font-family: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
-    
+
         &:focus {
-            /* border-color: rgb(183, 255, 230); */
-            box-shadow: rgb(97, 255, 200) 0px 0px 10px;
+            border-color: var(--theme-active-color-hover);
+            /* box-shadow: var(--theme-active-color-hover) 0px 0px 10px; */
         }
-    
+
         &:focus-visible {
-            outline: rgb(183, 255, 230);
+            outline: var(--theme-active-color-hover);
         }
-    
+
         &::-webkit-input-placeholder {
-            color: #a8a8a8;
+            color: var(--theme-active-color);
         }
     }
 
     button {
         cursor: pointer;
         font-size: 16px;
-        color: #a8a8a8;
         border-radius: 6px;
         background: transparent;
-        border: 2px solid #a8a8a8;
         transition: all .3s ease-in-out;
-    
+        color: var(--theme-active-color);
+        border: 2px solid var(--theme-active-color);
+
         &:disabled {
             opacity: .5;
             pointer-events: none;
         }
-    
+
         &:hover {
-            color: #000;
             background: transparent;
-            border: 2px solid #000;
+            color: var(--theme-active-color-hover);
+            border: 2px solid var(--theme-active-color-hover);
         }
     }
-    
+
 }
 
 /* main #contact .form,

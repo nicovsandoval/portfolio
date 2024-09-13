@@ -1,30 +1,33 @@
 #about {
     padding-top: 100px;
-    text-align: center;
-    justify-content: space-evenly;
+    flex-direction: row;
 
     & * {
         max-width: 700px;
         transition: var(--transition-all-01-ease-in-out);
     }
 
-    & img {
-        width: 200px;
+    img {
+        width: 300px;
         border-radius: 50%;
+        border: 2px solid var(--theme-active-color-hover);
     }
 
-    & h1 {
+    h1 {
         font-size: 55px;
     }
 
-    & p.title-profession {
-        & span {
-            color: var(--theme-active-color-hover);
-            font-family: 'Montserrat-SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-        }
+    p.title {
+        font-size: 14px;
+        font-family: 'OpenSans-SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
-    & p.current-work {
+    p.profession {
+        color: var(--theme-active-color-hover);
+        font-family: 'OpenSans-SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    p.current-work {
         font-size: 22px;
 
         & span {
@@ -34,7 +37,7 @@
         }
     }
 
-    & .icon-container {
+    .icon-container {
         left: 50%;
         bottom: 1rem;
         position: absolute;
@@ -104,10 +107,12 @@
 /* Responsive Styles */
 @media (min-width: 481px) and (max-width: 768px) {
     #about {
+        text-align: center;
+        flex-direction: column;
         padding-inline: 2rem !important;
 
         & img {
-            width: 200px;
+            width: 220px;
         }
 
         & h1 {
@@ -131,10 +136,12 @@
 
 @media (max-width: 500px) {
     #about {
+        text-align: center;
+        flex-direction: column;
         padding-inline: 1rem !important;
 
         & img {
-            width: 150px;
+            width: 180px;
         }
 
         & h1 {
