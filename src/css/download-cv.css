@@ -1,4 +1,5 @@
 #download-cv {
+    min-height: auto;
     button {
         font-size: 18px;
         font-weight: 600;
