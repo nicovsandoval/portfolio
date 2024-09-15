@@ -74,15 +74,24 @@
             }
         }
 
-        /* #experience {}
 
-        #skills {}
+        /* Responsive Styles */
+        @media (min-width: 481px) and (max-width: 840px) {
+            main {
+                section {
+                    padding-inline: 2rem !important;
+                }
+            }
+        }
 
-        #about_me {}
-
-        #projects {}
-
-        footer {} */
+        /* Responsive Styles */
+        @media (max-width: 500px) {
+            main {
+                section {
+                    padding-inline: 1rem !important;
+                }
+            }
+        }
     </style>
 
     <script type="module" src="./js/index.js"></script>
@@ -91,15 +100,18 @@
 <body class="light">
 
     <header class="width-100 display-flex align-items-center justify-content-between padding-inline-5">
-        <a href="https://nicosandoval.dev"><img src="./assets/svgs/logo.svg"></img></a>
+        <a href="https://nicosandoval.dev">
+            <img src="./assets/svgs/logo.svg"></img>
+        </a>
         <nav class="display-flex align-items-center gap-3">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#download-cv">CV</a>
-            <a href="#contact">Contact</a>
+            <div class="nav-links display-flex align-items-center gap-3">
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#download-cv">CV</a>
+                <a href="#contact">Contact</a>
+            </div>
             <button type="button" id="btn-theme" aria-label="Cambiar Tema"></button>
             <div class="container-themes flex-direction-column padding-block-1">
                 <button type="button" id="btn-theme-dark"
@@ -133,7 +145,7 @@
             </div>
         </section>
         <!-- Experience -->
-        <section id="experience">
+        <section id="experience" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Experience</h1>
                 <div class="companies display-flex flex-direction-column gap-3 padding-inline-5">
@@ -153,7 +165,7 @@
             </div>
         </section>
         <!-- Skills -->
-        <section id="skills">
+        <section id="skills" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Skills</h1>
                 <div class="container-skills display-flex justify-content-center flex-wrap gap-3">
@@ -193,7 +205,7 @@
             </div>
         </section>
         <!-- Projects -->
-        <section id="projects">
+        <section id="projects" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Projects</h1>
                 <div class="container-projects display-flex justify-content-center flex-wrap gap-3">
@@ -291,7 +303,7 @@
             </div>
         </section>
         <!-- Services -->
-        <section id="services">
+        <section id="services" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Services</h1>
                 <div class="container-services display-flex justify-content-center flex-wrap gap-3">
@@ -329,7 +341,7 @@
             </div>
         </section>
         <!-- Download CV -->
-        <section id="download-cv">
+        <section id="download-cv" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Download CV</h1>
                 <p>If you want download my CV</p>
@@ -341,10 +353,10 @@
             </div>
         </section>
         <!-- Contact -->
-        <section id="contact">
+        <section id="contact" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Contact</h1>
-                <div class="container-contacts display-flex justify-content-center flex-wrap gap-3">
+                <div class="container-contacts display-flex justify-content-center flex-wrap gap-5">
                     <div class="form padding-inline-3">
                         <form class="display-flex flex-direction-column gap-3">
 
@@ -363,10 +375,12 @@
                         </form>
                     </div>
                     <div class="social-media display-flex flex-direction-column gap-3">
-                        <p>Connect with me on social media</p>
-                        <div class="links-social-media display-flex align-items-center gap-3">
+                        <p class="text-center">Connect with me on social media</p>
+                        <div class="links-social-media display-flex align-items-center justify-content-center gap-3">
                             <a href="https://github.com/nicovsandoval" target="_blank" class="icon icon-free-github"></a>
                             <a href="https://www.linkedin.com/in/nicovsandoval" target="_blank" class="icon icon-free-linkedin"></a>
+                            <a href="" class="icon icon-free-instagram"></a>
+                            <a href="" class="icon icon-free-twitter"></a>
                         </div>
                     </div>
                 </div>
@@ -375,15 +389,16 @@
     </main>
 
     <footer class="display-flex align-items-center justify-content-between padding-4">
-        <div class="logo">&copy; 2024 Nicolás Viviescas, all right reserved.</div>
+        <div class="logo text-center">&copy; 2024 Nicolás Viviescas, all right reserved.</div>
         <nav class="display-flex align-items-center gap-3">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#services">Services</a>
-            <a href="#download-cv">CV</a>
-            <a href="#contact">Contact</a>
+            <div class="nav-links display-flex align-items-center gap-3">
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#services">Services</a>
+                <a href="#download-cv">CV</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </footer>
 
