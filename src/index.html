@@ -11,8 +11,11 @@
     <link rel="stylesheet" href="./css/utils/flexbox.css">
 
     <!-- Fonts Styles -->
-    <link rel="stylesheet" href="./assets/fonts/Icomoon/icomoon.css">
     <link rel="stylesheet" href="./assets/fonts/Opens-sans/open-sans.css">
+    
+    <!-- Remix Icons Stylesheet -->
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
 
     <!-- Generic Styles -->
     <link rel="stylesheet" href="./css/index.css">
@@ -34,8 +37,8 @@
 
             /* - Theme dark - */
             --theme-dark-color: white;
-            --theme-dark-background: #0a0028;
-            --theme-dark-color-hover: yellow;
+            --theme-dark-background: #121212;
+            --theme-dark-color-hover: #2995E0;
             /* - Theme light - */
             --theme-light-color: #00091f;
             --theme-light-background: #ecf4ff;
@@ -95,6 +98,7 @@
     </style>
 
     <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/download.js"></script>
 </head>
 
 <body class="light">
@@ -112,23 +116,15 @@
                 <a href="#download-cv">CV</a>
                 <a href="#contact">Contact</a>
             </div>
-            <button type="button" id="btn-theme" aria-label="Cambiar Tema"></button>
-            <div class="container-themes flex-direction-column padding-block-1">
-                <button type="button" id="btn-theme-dark"
-                    class="display-flex align-items-center gap-1 padding-inline-2 padding-block-1">
-                    <span></span>
-                    Dark
-                </button>
-                <button type="button" id="btn-theme-light"
-                    class="display-flex align-items-center gap-1 padding-inline-2 padding-block-1">
-                    <span></span>
-                    Light
-                </button>
-            </div>
+            <button type="button" id="btn-theme" aria-label="Cambiar Tema">
+                <em class="ri-moon-fill" id="icon-theme"></em>
+            </button>
         </nav>
     </header>
+    
 
     <main>
+        <!-- About -->
         <section id="about" class="align-items-center padding-inline-5 gap-3">
             <img loading="lazy" src="./assets/images/foto.webp" alt="Foto StbDev">
             <div class="display-flex flex-direction-column gap-2">
@@ -199,7 +195,7 @@
                     </article>
                     <article class="skill">
                         <img src="./assets/svgs/aws.svg" alt="Icon ANGULAR">
-                        <span>Amazon Web Services</span>
+                        <span>AWS</span>
                     </article>
                 </div>
             </div>
@@ -215,13 +211,14 @@
                         </div>
                         <div class="card-body">
                             <h1>Contraloría Digital</h1>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            <p class="description">Developed for the Comptroller of Sonora, this system automates internal processes, enhancing efficiency and transparency in public financial management.</p>
                             <div class="list-tech display-flex gap-2">
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
+                                <img src="assets/svgs/angular.svg">
+                                <img src="assets/svgs/netcore.svg">
+                                <img src="assets/svgs/sqlserver.svg">
+                                <img src="assets/svgs/swagger.svg">
+                                <img src="assets/svgs/docker.svg">
                             </div>
-                            <a>View project</a>
                         </div>
                     </article>
                     <article class="card-project">
@@ -230,13 +227,14 @@
                         </div>
                         <div class="card-body">
                             <h1>Etiquetado Climático</h1>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            <p class="description">An application for classifying environmental and non-environmental projects across Latin American entities, promoting sustainability and informed decision-making.</p>
                             <div class="list-tech display-flex gap-2">
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
+                                <img src="assets/svgs/angular.svg">
+                                <img src="assets/svgs/netcore.svg">
+                                <img src="assets/svgs/sqlserver.svg">
+                                <img src="assets/svgs/swagger.svg">
+                                <img src="assets/svgs/docker.svg">
                             </div>
-                            <a>View project</a>
                         </div>
                     </article>
                     <article class="card-project">
@@ -244,14 +242,14 @@
                             <img src="./assets/images/spark.webp" alt="Icon HTML">
                         </div>
                         <div class="card-body">
-                            <h1>Spark - MassMutual</h1>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            <h1>Spark</h1>
+                            <p class="description">LA MassMutual initiative designed to gather ideas, innovations, pilots, and projects, fostering a culture of innovation and collaboration within the company.</p>
                             <div class="list-tech display-flex gap-2">
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
+                                <img src="assets/svgs/angular.svg">
+                                <img src="assets/svgs/netcore.svg">
+                                <img src="assets/svgs/sqlserver.svg">
+                                <img src="assets/svgs/swagger.svg">
                             </div>
-                            <a>View project</a>
                         </div>
                     </article>
                     <article class="card-project">
@@ -260,13 +258,14 @@
                         </div>
                         <div class="card-body">
                             <h1>Latam Projects Hub</h1>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            <p class="description">A centralized hub for Latin American projects, streamlining classification through an ETL process to support strategic planning and regional development.</p>
                             <div class="list-tech display-flex gap-2">
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
+                                <img src="assets/svgs/wordpress.svg">
+                                <img src="assets/svgs/javascript.svg">
+                                <img src="assets/svgs/netcore.svg">
+                                <img src="assets/svgs/sqlserver.svg">
+                                <img src="assets/svgs/swagger.svg">
                             </div>
-                            <a>View project</a>
                         </div>
                     </article>
                     <article class="card-project">
@@ -275,13 +274,14 @@
                         </div>
                         <div class="card-body">
                             <h1>ELECTROKIT</h1>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            <p class="description">A toolkit created with the Inter-American Development Bank to drive continuous improvement in electric distribution companies, based on global best practices in four key areas.</p>
                             <div class="list-tech display-flex gap-2">
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
+                                <img src="assets/svgs/angular.svg">
+                                <img src="assets/svgs/netcore.svg">
+                                <img src="assets/svgs/sqlserver.svg">
+                                <img src="assets/svgs/swagger.svg">
+                                <img src="assets/svgs/power-bi.svg">
                             </div>
-                            <a>View project</a>
                         </div>
                     </article>
                     <article class="card-project">
@@ -290,13 +290,14 @@
                         </div>
                         <div class="card-body">
                             <h1>Integra Initiatives</h1>
-                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            <p class="description">A platform that consolidates and provides updated information on integration initiatives in Latin America and the Caribbean, supporting sustainable growth and regional development.</p>
                             <div class="list-tech display-flex gap-2">
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
-                                <em class="icon icon-free-html-five"></em>
+                                <img src="assets/svgs/angular.svg">
+                                <img src="assets/svgs/netcore.svg">
+                                <img src="assets/svgs/sqlserver.svg">
+                                <img src="assets/svgs/swagger.svg">
+                                <img src="assets/svgs/azure.svg">
                             </div>
-                            <a>View project</a>
                         </div>
                     </article>
                 </div>
@@ -308,32 +309,32 @@
                 <h1>Services</h1>
                 <div class="container-services display-flex justify-content-center flex-wrap gap-3">
                     <article class="service">
-                        <em class="icon icon-free-sphere"></em>
+                        <em class="ri-cpu-line"></em>
                         <h1>Software Architecture</h1>
                         <p>Designing scalable and maintainable software architectures for complex systems.</p>
                     </article>
                     <article class="service">
-                        <em class="icon icon-free-sphere"></em>
+                        <em class="ri-code-line"></em>
                         <h1>BackEnd Development</h1>
                         <p>End-to-end backend development, from API design to database management</p>
                     </article>
                     <article class="service">
-                        <em class="icon icon-free-sphere"></em>
+                        <em class="ri-global-line"></em>
                         <h1>Cloud Solutions</h1>
                         <p>Implementing and optimizing cloud-based infrastructures for improved scalability and performance.</p>
                     </article>
                     <article class="service">
-                        <em class="icon icon-free-database"></em>
+                        <em class="ri-database-2-line"></em>
                         <h1>Database Design</h1>
                         <p>Creating efficient and normalized database schemas for optimal data management.</p>
                     </article>
                     <article class="service">
-                        <em class="icon icon-free-sphere"></em>
+                        <em class="ri-server-line"></em>
                         <h1>DevOps</h1>
                         <p>Streamlining development and deployment processes for faster, more reliable software delivery.</p>
                     </article>
                     <article class="service">
-                        <em class="icon icon-free-sphere"></em>
+                        <em class="ri-briefcase-line"></em>
                         <h1>Tech Consulting</h1>
                         <p>Providing expert advice on technology stack selection and system optimization.</p>
                     </article>
@@ -345,9 +346,9 @@
             <div class="container gap-5">
                 <h1>Download CV</h1>
                 <p>If you want download my CV</p>
-                <button type="button" class="padding-2">
+                <button type="button" class="padding-2" onclick="downloadPDF()">
                     <p>
-                        Click here. <em class="icon icon-free-file-pdf"></em>
+                        Click here. <em class="ri-download-2-line"></em>
                     </p>
                 </button>
             </div>
@@ -377,10 +378,8 @@
                     <div class="social-media display-flex flex-direction-column gap-3">
                         <p class="text-center">Connect with me on social media</p>
                         <div class="links-social-media display-flex align-items-center justify-content-center gap-3">
-                            <a href="https://github.com/nicovsandoval" target="_blank" class="icon icon-free-github"></a>
-                            <a href="https://www.linkedin.com/in/nicovsandoval" target="_blank" class="icon icon-free-linkedin"></a>
-                            <a href="" class="icon icon-free-instagram"></a>
-                            <a href="" class="icon icon-free-twitter"></a>
+                            <a href="https://github.com/nicovsandoval" target="_blank" class="icon ri-github-fill"></a>
+                            <a href="https://www.linkedin.com/in/nicovsandoval" target="_blank" class="icon ri-linkedin-box-fill"></a>
                         </div>
                     </div>
                 </div>
