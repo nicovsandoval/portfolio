@@ -47,15 +47,35 @@ header {
     }
 
     button {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
         border: none;
         border-radius: 50%;
         color: var(--theme-active-color);
-        background: conic-gradient(green, blue 33%, red 66%, green);
+        background: var(--theme-active-background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Ajustes para tema oscuro */
+        &.dark {
+            color: var(--theme-dark-color);
+            background: var(--theme-dark-background);
+        }
+
+        /* Ajustes para tema claro */
+        &.light {
+            color: var(--theme-light-color);
+            background: var(--theme-light-background);
+        }
 
         &:hover {
             transform: scale(1.1);
+            color: var(--theme-active-color-hover);
+        }
+
+        em {
+            font-size: 1.1rem;
         }
     }
 

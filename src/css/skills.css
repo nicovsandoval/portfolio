@@ -4,8 +4,8 @@
         display: flex;
         font-size: 14px;
         font-weight: 600;
-        max-width: 200px;
-        min-height: 150px;
+        max-width: 150px;
+        min-height: 120px;
         align-items: center;
         align-items: center;
         border-radius: 10px;
@@ -14,7 +14,7 @@
         border: 2px solid #bcbcbc;
 
         img {
-            max-width: 65px;
+            max-width: 55px;
         }
 
         &:hover {

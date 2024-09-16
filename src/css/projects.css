@@ -26,6 +26,14 @@
             .icon {
                 font-size: 25px;
             }
+
+            em {
+                font-size: 25px;
+            }
+
+            img {
+                max-height: 30px;
+            }
         }
 
         &:hover {

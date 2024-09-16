@@ -13,7 +13,6 @@ body {
     font-family: 'OpenSans-Regular', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     /* SET THEMES */
-
     &.dark {
         --theme-active-color: var(--theme-dark-color);
         --theme-active-background: var(--theme-dark-background);
@@ -26,7 +25,6 @@ body {
         --theme-active-color-hover: var(--theme-light-color-hover);
     }
 }
-
 
 ::-webkit-scrollbar {
     width: 6px;
