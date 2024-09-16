@@ -4,13 +4,13 @@
 
     & * {
         max-width: 700px;
-        transition: var(--transition-all-01-ease-in-out);
+        transition: var(--transition-all-03-ease-in-out); /* Aplicar una transición uniforme */
     }
 
     img {
         width: 300px;
         border-radius: 50%;
-        border: 2px solid var(--theme-active-color-hover);
+        border: 2px solid var(--theme-dark-color-hover);
     }
 
     h1 {
@@ -23,7 +23,7 @@
     }
 
     p.profession {
-        color: var(--theme-active-color-hover);
+        color: var(--theme-dark-color-hover);
         font-family: 'OpenSans-SemiBold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
 
@@ -32,9 +32,53 @@
 
         & span {
             font-size: 25px;
-            color: var(--theme-active-color-hover);
+            color: var(--theme-dark-color-hover);
             font-family: 'Montserrat-Bold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
+    }
+
+    /* Estilos para los botones de contacto */
+    .contact-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .contact-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; /* Espacio entre el ícono y el texto */
+        padding: 0.5rem 1rem; /* Relleno interno */
+        border-radius: 50px; /* Borde completamente redondeado */
+        background-color: transparent; /* Fondo transparente */
+        color: var(--theme-active-color); /* Color del texto */
+        border: 2px solid var(--theme-active-color); /* Borde de color */
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none; /* Eliminar el subrayado */
+        transition: all 0.3s ease; /* Aplicar transición uniforme a todos los cambios */
+
+        i {
+            font-size: 1.2rem; /* Tamaño del ícono */
+            transition: inherit; /* Heredar la transición del elemento padre */
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            color: var(--theme-active-color-hover); /* Cambia el color del texto en hover */
+            border-color: var(--theme-active-color-hover); /* Cambia el color del borde en hover */
+        }
+    }
+
+    /* Estilos para el modo oscuro */
+    body.dark .contact-button {
+        color: var(--theme-dark-color); /* Color del texto en modo oscuro */
+        border-color: var(--theme-dark-color); /* Color del borde en modo oscuro */
+    }
+
+    body.dark .contact-button:hover {
+        color: var(--theme-dark-color-hover); /* Cambia el color del texto en hover en modo oscuro */
+        border-color: var(--theme-dark-color-hover); /* Cambia el color del borde en hover en modo oscuro */
     }
 
     .icon-container {
@@ -90,7 +134,6 @@
             }
         }
     }
-
 }
 
 @keyframes scroll-down {
@@ -123,13 +166,18 @@
             font-size: 20px;
 
             & span {
-                font-size: 22px
+                font-size: 22px;
             }
-
         }
 
-        & p.icon-container {
+        & .icon-container {
             visibility: hidden;
+        }
+
+        /* Ajustar los botones de contacto en tabletas */
+        .contact-button {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
         }
     }
 }
@@ -160,13 +208,22 @@
             }
         }
 
+        & .contact-buttons {
+            justify-content: center; /* Centrar los botones en móviles */
+        }
+
         & .icon-container {
             visibility: hidden;
+        }
+
+        /* Ajustar los botones de contacto en móviles */
+        .contact-button {
+            padding: 0.5rem 0.8rem;
+            font-size: 0.85rem;
         }
     }
 
     #about p:last-child span {
         font-size: 18px;
-
     }
 }

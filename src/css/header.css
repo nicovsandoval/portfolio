@@ -5,6 +5,12 @@ header {
     position: fixed;
     transform: translateX(-50%);
     background: linear-gradient(180deg, var(--color-white) 0%, rgba(255, 255, 255, 0) 100%);
+    
+    /* Ajusta el logo SVG */
+    a img {
+        width: 150px; /* Ajusta el tamaño del logo para pantallas grandes */
+        height: auto; /* Mantén la proporción del logo */
+    }
 
     * {
         transition: var(--transition-all-03-ease-in-out);
@@ -162,6 +168,11 @@ header {
         &>a {
             font-size: 18px;
         }
+
+        /* Ajuste del tamaño del logo en tabletas */
+        a img {
+            width: 120px; /* Tamaño del logo en tabletas */
+        }
     }
 }
 
@@ -180,7 +191,7 @@ header {
             gap: .8rem !important;
 
             .nav-links {
-                gap: .5rem
+                gap: .5rem;
             }
 
             a {
@@ -190,6 +201,11 @@ header {
             &:before {
                 content: "";
             }
+        }
+
+        /* Ajuste del tamaño del logo en móviles */
+        a img {
+            width: 100px; /* Tamaño del logo en móviles */
         }
     }
 }
