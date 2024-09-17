@@ -1,73 +1,105 @@
-#experience {
-    padding-top: 100px;
-
-    .date {
-        font-size: 0.875rem;
-        color: var(--theme-active-color-hover);
-        background-color: var(--theme-active-background);
-        padding: 0.2rem 0.5rem;
-        border-radius: 10px;
-        display: inline-block;
-        margin-bottom: 0.5rem;
-    }
-
-    .tech-tags {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    .tag {
-        display: inline-block;
-        padding: 0.3rem 0.8rem;
-        border-radius: 20px;
-        background-color: rgba(60, 203, 244, 0.4);
-        color: #0E5298;
-        font-size: 0.875rem;
-        font-weight: 500;
-        cursor: default; /* Cambia el cursor a default */
-        transition: var(--transition-all-03-ease-in-out), transform 0.2s ease; /* Añade la transición para el hover */
-    }
-
-    /* Efecto hover */
-    .tag:hover {
-        transform: scale(1.1); /* Agranda el tag un poco */
-    }
-
-    /* Modo oscuro */
-    body.dark & .tag {
-        background-color: rgba(60, 203, 244, 0.2);
-        color: #ffffff;
-    }
+/* Estilos principales de la línea de tiempo */
+.timeline {
+    position: relative;
+    padding-left: 10px; /* Espacio para la línea */
+    margin-top: 2rem;
 }
 
-/* Responsive Styles */
-@media (min-width: 481px) and (max-width: 768px) {
-    #experience {
-        padding-inline: 2rem;
+.timeline-item {
+    display: flex;
+    position: relative;
+    margin-bottom: 1rem;
+}
 
-        .timeline-content {
-            padding-left: 2rem;
-        }
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background: #dadee4; /* Color de la línea */
+    z-index: -1;
+}
+
+/* Puntos en la línea de tiempo */
+.timeline-icon {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.timeline-icon .badge {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--theme-active-color-hover); /* Color del punto */
+    border-radius: 50%; /* Hace que el punto sea circular */
+    border: 3px solid var(--theme-active-color-hover);
+}
+
+/* Contenido de la línea de tiempo */
+.timeline-content {
+    flex: 1;
+    padding-left: 1rem;
+}
+
+.date {
+    font-size: 0.875rem;
+    color: var(--theme-active-color-hover);
+    background-color: var(--theme-active-background);
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    background-color: rgba(60, 203, 244, 0.4);
+    color: #0E5298;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: default;
+    transition: var(--transition-all-03-ease-in-out), transform 0.2s ease;
+}
+
+.tag:hover {
+    transform: scale(1.1);
+}
+
+/* Modo oscuro */
+body.dark .tag {
+    background-color: rgba(60, 203, 244, 0.2);
+    color: #ffffff;
+}
+
+/* Estilos responsivos */
+@media (min-width: 481px) and (max-width: 768px) {
+    .timeline {
+        padding-left: 30px;
     }
 }
 
 @media (max-width: 500px) {
-    #experience {
-        padding-inline: 1rem;
+    .timeline {
+        padding-left: 20px;
+    }
 
-        .timeline-content {
-            padding-left: 1.8rem;
-        }
+    .date {
+        font-size: 0.75rem;
+    }
 
-        .date {
-            font-size: 0.75rem;
-        }
-
-        .tag {
-            font-size: 0.75rem;
-            padding: 0.2rem 0.5rem;
-        }
+    .tag {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.5rem;
     }
 }
