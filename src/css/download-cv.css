@@ -1,5 +1,11 @@
 #download-cv {
     min-height: auto;
+
+    /* Centrar solo el texto y el botón */
+    .center-content {
+        text-align: center; /* Centra el contenido */
+    }
+
     button {
         font-size: 18px;
         font-weight: 600;
@@ -8,6 +14,9 @@
         background: transparent;
         color: var(--theme-active-color);
         border: 3px solid var(--theme-active-color);
+        max-width: 200px; /* Ajusta este valor según el ancho deseado */
+        margin: 0 auto; /* Centra el botón horizontalmente */
+        display: block; /* Para que funcione correctamente con el centrado */
 
         p {
             transition: var(--transition-all-03-ease-in-out);
@@ -22,5 +31,10 @@
                 transform: scale(1.1);
             }
         }
+    }
+
+    /* Añadir espacio debajo del texto encima del botón */
+    .center-content > p {
+        margin-bottom: 1rem; /* Ajusta el valor según el espacio deseado */
     }
 }

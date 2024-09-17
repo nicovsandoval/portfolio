@@ -6,6 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 
+    <!-- Meta tags Open Graph -->
+    <meta property="og:title" content="Nicolás Viviescas - Software Architect & Developer">
+    <meta property="og:description"
+        content="I'm a software architect and backend developer passionate about creating scalable solutions.">
+    <meta property="og:image" content="https://nicosandoval.dev/assets/images/thumbnail.webp">
+    <!-- Cambia esta URL a la imagen que desees -->
+    <meta property="og:url" content="https://nicosandoval.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Meta tags Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nicolás Viviescas - Software Architect & Developer">
+    <meta name="twitter:description"
+        content="I'm a software architect and backend developer passionate about creating scalable solutions.">
+    <meta name="twitter:image" content="https://nicosandoval.dev/assets/images/thumbnail.webp">
+    <!-- Cambia esta URL a la imagen que desees -->
+
     <!-- Utils Styles -->
     <link rel="stylesheet" href="./css/utils/sizing.css">
     <link rel="stylesheet" href="./css/utils/flexbox.css">
@@ -100,6 +119,7 @@
 
     <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/download.js"></script>
+    <script type="module" src="./js/contact.js"></script>
 </head>
 
 <body class="light">
@@ -391,36 +411,34 @@
         <section id="download-cv" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Download CV</h1>
-                <p>If you want download my CV</p>
-                <button type="button" class="padding-2" onclick="downloadPDF()">
-                    <p>
-                        Click here. <em class="ri-download-2-line"></em>
-                    </p>
-                </button>
+                <!-- Agrupar contenido que quieres centrar -->
+                <div class="center-content">
+                    <p>If you want to download my CV</p>
+                    <button type="button" class="padding-2" onclick="downloadPDF()">
+                        <p>
+                            Click here. <em class="ri-download-2-line"></em>
+                        </p>
+                    </button>
+                </div>
             </div>
         </section>
+
         <!-- Contact -->
         <section id="contact" class="padding-inline-5">
             <div class="container gap-5">
                 <h1>Contact</h1>
                 <div class="container-contacts display-flex justify-content-center flex-wrap gap-5">
+                    <!-- Botón para abrir el cliente de correo electrónico -->
                     <div class="form padding-inline-3">
-                        <form class="display-flex flex-direction-column gap-3">
-
-                            <div class="custom-input df-fc">
-                                <input type="text" id="name" class="form-input px-2" placeholder=" ">
-                                <label for="name" class="mx-2">Name</label>
-                            </div>
-                            <div class="custom-input df-fc">
-                                <input type="email" id="email" class="form-input px-2" placeholder=" ">
-                                <label for="email" class="form-label mx-2">Email address</label>
-                            </div>
-
-                            <textarea placeholder="Leave your message here..." class="padding-2"></textarea>
-
-                            <button type="submit" class="padding-2">Send</button>
-                        </form>
+                        <div class="contact-btn-container">
+                            <!-- Texto adicional encima del botón -->
+                            <p class="text-center">Feel free to reach out:</p>
+                            <button type="button" class="contact-btn" onclick="openMailClient()">
+                                <p>Contact Me <em class="ri-mail-send-line"></em></p>
+                            </button>
+                        </div>
                     </div>
+                    <!-- Redes sociales -->
                     <div class="social-media display-flex flex-direction-column gap-3">
                         <p class="text-center">Connect with me on social media</p>
                         <div class="links-social-media display-flex align-items-center justify-content-center gap-3">
@@ -432,6 +450,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="display-flex align-items-center justify-content-between padding-4">
